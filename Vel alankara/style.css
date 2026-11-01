@@ -1,0 +1,575 @@
+/* ==============================
+   BASIC SETTINGS
+================================ */
+.brand-logo {
+  height: 45px;       /* Adjust height to fit your navbar */
+  width: auto;        /* Keeps original proportions */
+  display: block;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+    background: #f7f3ed;
+    color: #3e3833;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button {
+    font-family: inherit;
+}
+
+
+/* ==============================
+   NAVBAR
+================================ */
+
+.navbar {
+    width: 100%;
+    padding: 22px 7%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background: #f7f3ed;
+
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    display: flex;
+    flex-direction: column;
+    line-height: 1;
+}
+
+.logo span {
+    font-family: "DM Serif Display", serif;
+    font-size: 28px;
+    letter-spacing: 3px;
+}
+
+.logo small {
+    font-size: 8px;
+    letter-spacing: 4px;
+    margin-top: 5px;
+}
+
+
+.navbar nav {
+    display: flex;
+    gap: 35px;
+}
+
+.navbar nav a {
+    font-size: 13px;
+    transition: 0.3s;
+}
+
+.navbar nav a:hover {
+    opacity: 0.6;
+}
+
+
+.nav-whatsapp {
+    border: 1px solid #6f665e;
+    padding: 11px 18px;
+    font-size: 12px;
+    transition: 0.3s;
+}
+
+.nav-whatsapp:hover {
+    background: #3e3833;
+    color: #fff;
+}
+
+
+/* ==============================
+   HERO
+================================ */
+
+.hero {
+    min-height: 650px;
+
+    display: flex;
+    align-items: center;
+
+    padding: 80px 7%;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(247,243,237,0.98) 0%,
+            rgba(247,243,237,0.92) 45%,
+            rgba(247,243,237,0.45) 100%
+        ),
+        url("images/hero.jpg");
+
+    background-size: cover;
+    background-position: center;
+}
+
+
+.hero-content {
+    max-width: 650px;
+}
+
+
+.small-heading {
+    font-size: 11px;
+    letter-spacing: 4px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+
+.hero h1 {
+    font-family: "DM Serif Display", serif;
+    font-size: clamp(45px, 6vw, 78px);
+    line-height: 1.05;
+    font-weight: 400;
+    margin-bottom: 25px;
+}
+
+
+.hero-description {
+    max-width: 500px;
+    font-size: 15px;
+    line-height: 1.8;
+    margin-bottom: 35px;
+}
+
+
+/* ==============================
+   BUTTON
+================================ */
+
+.primary-button {
+    display: inline-block;
+
+    background: #3e3833;
+    color: #fff;
+
+    padding: 15px 25px;
+
+    font-size: 12px;
+    letter-spacing: 1px;
+
+    transition: 0.3s;
+}
+
+.primary-button:hover {
+    transform: translateY(-2px);
+    opacity: 0.9;
+}
+
+
+/* ==============================
+   CATEGORIES
+================================ */
+
+.categories-section {
+    padding: 100px 7%;
+}
+
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.section-heading h2 {
+    font-family: "DM Serif Display", serif;
+    font-size: 48px;
+    font-weight: 400;
+    margin-bottom: 12px;
+}
+
+.section-heading p:last-child {
+    font-size: 14px;
+    opacity: 0.7;
+}
+
+
+/* ==============================
+   CATEGORY FILTERS
+================================ */
+
+.category-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+
+    margin-bottom: 55px;
+}
+
+.category-button {
+    background: transparent;
+
+    border: 1px solid #c8beb4;
+
+    padding: 11px 18px;
+
+    font-size: 11px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.category-button:hover,
+.category-button.active {
+    background: #3e3833;
+    color: #fff;
+    border-color: #3e3833;
+}
+
+
+/* ==============================
+   PRODUCTS
+================================ */
+
+.products-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 28px;
+}
+
+
+.product-card {
+    background: #eee8df;
+
+    position: relative;
+
+    transition: 0.3s;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+}
+
+
+.product-image {
+    width: 100%;
+    aspect-ratio: 1 / 1.15;
+
+    background: #ddd4ca;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+}
+
+
+.product-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+
+.image-placeholder {
+    text-align: center;
+    color: #81766c;
+    padding: 20px;
+}
+
+.image-placeholder span {
+    display: block;
+    font-size: 12px;
+    margin-bottom: 8px;
+}
+
+.image-placeholder small {
+    font-size: 10px;
+}
+
+
+.product-info {
+    padding: 22px;
+}
+
+
+.product-category {
+    font-size: 9px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+
+    opacity: 0.6;
+
+    margin-bottom: 8px;
+}
+
+
+.product-name {
+    font-family: "DM Serif Display", serif;
+    font-size: 23px;
+    font-weight: 400;
+
+    margin-bottom: 10px;
+}
+
+
+.product-price {
+    font-size: 14px;
+    font-weight: 600;
+
+    margin-bottom: 18px;
+}
+
+
+.order-button {
+    display: block;
+
+    width: 100%;
+
+    padding: 12px;
+
+    text-align: center;
+
+    border: 1px solid #756b62;
+
+    font-size: 11px;
+
+    transition: 0.3s;
+}
+
+.order-button:hover {
+    background: #3e3833;
+    color: white;
+}
+
+
+/* ==============================
+   PRODUCT BADGES
+================================ */
+
+.product-badge {
+    position: absolute;
+
+    top: 15px;
+    left: 15px;
+
+    background: #3e3833;
+    color: white;
+
+    padding: 7px 11px;
+
+    font-size: 9px;
+    letter-spacing: 1px;
+
+    z-index: 2;
+}
+
+
+/* ==============================
+   CONTACT
+================================ */
+
+.contact-section {
+    margin: 50px 7% 100px;
+
+    padding: 70px;
+
+    background: #e8dfd5;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 40px;
+}
+
+
+.contact-section h2 {
+    font-family: "DM Serif Display", serif;
+
+    font-size: 45px;
+    font-weight: 400;
+
+    margin-bottom: 15px;
+}
+
+
+.contact-section p:not(.small-heading) {
+    max-width: 550px;
+
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+
+/* ==============================
+   FOOTER
+================================ */
+
+footer {
+    padding: 50px 7%;
+
+    border-top: 1px solid #d5ccc2;
+
+    text-align: center;
+}
+
+
+.footer-logo {
+    font-family: "DM Serif Display", serif;
+
+    font-size: 28px;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 10px;
+}
+
+
+footer p {
+    font-size: 12px;
+
+    opacity: 0.65;
+
+    margin-bottom: 15px;
+}
+
+
+footer .copyright {
+    font-size: 10px;
+
+    margin-top: 25px;
+}
+
+
+/* ==============================
+   FLOATING WHATSAPP
+================================ */
+
+.whatsapp-float {
+    position: fixed;
+
+    right: 22px;
+    bottom: 22px;
+
+    background: #3e3833;
+    color: white;
+
+    padding: 14px 20px;
+
+    font-size: 11px;
+
+    box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+
+    z-index: 99;
+}
+
+
+/* ==============================
+   MOBILE
+================================ */
+
+@media (max-width: 800px) {
+
+    .navbar {
+        padding: 18px 5%;
+    }
+
+    .navbar nav {
+        display: none;
+    }
+
+    .hero {
+        min-height: 570px;
+        padding: 60px 5%;
+    }
+
+    .hero h1 {
+        font-size: 48px;
+    }
+
+    .categories-section {
+        padding: 70px 5%;
+    }
+
+    .section-heading h2 {
+        font-size: 38px;
+    }
+
+    .products-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+
+    .product-info {
+        padding: 15px;
+    }
+
+    .product-name {
+        font-size: 19px;
+    }
+
+    .contact-section {
+        margin: 30px 5% 70px;
+        padding: 40px 25px;
+
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .contact-section h2 {
+        font-size: 35px;
+    }
+
+}
+
+
+@media (max-width: 500px) {
+
+    .products-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .nav-whatsapp {
+        display: none;
+    }
+
+    .hero h1 {
+        font-size: 42px;
+    }
+
+    .category-list {
+        justify-content: flex-start;
+    }
+
+}
+.original-price {
+    text-decoration: line-through;
+    opacity: 0.5;
+    margin-right: 8px;
+    font-weight: 400;
+}
+
+.offer-price {
+    font-weight: 600;
+}
